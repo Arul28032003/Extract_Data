@@ -2,10 +2,11 @@
 import requests
 from bs4 import BeautifulSoup
 from deta import Deta
+import os
 
+# Load the Deta key from environment variable
+DETA_KEY = os.environ.get("DETA_KEY")
 
-# Load the environment variables
-DETA_KEY = "d0yz71smpt6_4D9jVZXkHECT2EFJEEnbSZuQVSskELvy"
 
 # Initialize with a project key
 deta = Deta(DETA_KEY)
@@ -82,7 +83,7 @@ for i in data:
 import requests
 from bs4 import BeautifulSoup
 from deta import Deta
-
+import os
 
 data=webscrape_MainNews("india")
 
@@ -109,10 +110,11 @@ for i in data:
 import requests
 from bs4 import BeautifulSoup
 from deta import Deta
+import os
 
 
 # Load the environment variables
-DETA_KEY = "d0yz71smpt6_4D9jVZXkHECT2EFJEEnbSZuQVSskELvy"
+DETA_KEY = os.environ.get("DETA_KEY")
 
 # Initialize with a project key
 deta = Deta(DETA_KEY)
