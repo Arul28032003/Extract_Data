@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -31,3 +31,4 @@ jobs:
       run: python Extract_data.py  # Replace with your script name
       env:
         DETA_KEY: ${{ secrets.DETA_KEY }}  # Use the Deta key from GitHub Secrets
+        
